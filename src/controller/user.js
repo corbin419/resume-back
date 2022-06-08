@@ -10,7 +10,9 @@ login = async (req, res) => {
     const user = await user_service.is_user(req.body);
     if (user && bcrypt.compareSync(req.body.password, user.password)) {
       const token = await user_service.token_create(user);
-      return res.status(201).json({ message: "登入成功", token: token });
+      return res
+        .status(201)
+        .json({ message: "登入成功", token: token, username: user.username });
     } else {
       return res.status(401).json({ message: "帳號或密碼錯誤" });
     }

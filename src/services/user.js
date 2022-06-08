@@ -2,7 +2,7 @@ require("dotenv").config();
 const db = require("../models/index.js");
 const { Op } = require("sequelize");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");//加密存DB
 
 is_user = async (body) => {
   const is_user = await db.Users.findOne({

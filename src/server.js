@@ -16,7 +16,7 @@ require("./routes/index.js")(router);
 server.use("/", router);
 
 //port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, (err) => {
   if (err) {

@@ -27,11 +27,11 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
-      },
+      },//新增ㄉ時間
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      }//修改資料的時間
     });
   },
   async down(queryInterface, Sequelize) {
